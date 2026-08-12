@@ -11,12 +11,12 @@ const products = [
     name: "Cortex",
     tagline: "Cognitive agent platform",
     description:
-      "Deploy and manage intelligent agents in production. Cortex is a higher-level platform built on the ZeroicAI framework — dashboards, monitoring, and managed runtimes without touching the low-level API.",
+      "Deploy and manage intelligent agents in production. Cortex is a higher-level platform built on the RustyAI framework — dashboards, monitoring, and managed runtimes without touching the low-level API.",
     icon: Brain,
     color: "text-green-400",
     bg: "bg-green-400/10",
     border: "border-green-400/20",
-    url: "https://cortex.zeroicai.xyz",
+    url: "https://cortex.rustyai.xyz",
     status: "soon",
   },
   {
@@ -28,7 +28,7 @@ const products = [
     color: "text-orange-400",
     bg: "bg-orange-400/10",
     border: "border-orange-400/20",
-    url: "https://arena.zeroicai.xyz",
+    url: "https://arena.rustyai.xyz",
     status: "soon",
   },
   {
@@ -40,19 +40,19 @@ const products = [
     color: "text-cyan-400",
     bg: "bg-cyan-400/10",
     border: "border-cyan-400/20",
-    url: "https://recall.zeroicai.xyz",
+    url: "https://recall.rustyai.xyz",
     status: "soon",
   },
   {
     name: "xbot",
     tagline: "Autonomous X agent",
     description:
-      "A live X/Twitter bot that posts scheduled content, responds to mentions, and reasons over a belief base before replying — the first ZeroicAI application running in production.",
+      "A live X/Twitter bot that posts scheduled content, responds to mentions, and reasons over a belief base before replying — the first RustyAI application running in production.",
     icon: Bot,
     color: "text-blue-400",
     bg: "bg-blue-400/10",
     border: "border-blue-400/20",
-    url: "https://x.com/ZeroicAI",
+    url: "https://x.com/RustyAI",
     status: "active",
   },
 ];
@@ -82,7 +82,7 @@ export function ProductsContent() {
             className="mb-12"
           >
             <h1 className="text-4xl font-bold mb-3">
-              Built with <span className="text-primary">ZeroicAI</span>
+              Built with <span className="text-primary">RustyAI</span>
             </h1>
             <p className="text-muted-foreground text-lg">
               Real applications powered by multi-agent coordination.

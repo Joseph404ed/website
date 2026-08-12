@@ -4,8 +4,8 @@ import { Layout } from '@/components/layout/Layout';
 import { ChevronRight } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Privacy Policy — ZeroicAI',
-  description: 'Privacy policy for ZeroicAI and zeroicai.xyz.',
+  title: 'Privacy Policy — RustyAI',
+  description: 'Privacy policy for RustyAI and rustyai.xyz.',
 };
 
 export default function PrivacyPage() {
@@ -30,7 +30,7 @@ export default function PrivacyPage() {
           <section>
             <h2 className="text-lg font-semibold text-foreground mb-3">1. Overview</h2>
             <p>
-              ZeroicAI ("we", "us", "our") operates the website at zeroicai.xyz. This policy explains what information
+              RustyAI ("we", "us", "our") operates the website at rustyai.xyz. This policy explains what information
               we collect, how we use it, and your rights regarding that information.
             </p>
           </section>
@@ -53,7 +53,7 @@ export default function PrivacyPage() {
             <h2 className="text-lg font-semibold text-foreground mb-3">3. How we use information</h2>
             <p>Information collected is used solely to:</p>
             <ul className="list-disc pl-5 mt-2 space-y-1">
-              <li>Respond to chat queries via the ZeroicAI cognitive agent.</li>
+              <li>Respond to chat queries via the RustyAI cognitive agent.</li>
               <li>Monitor and maintain the security and performance of the service.</li>
             </ul>
             <p className="mt-3">We do not sell, trade, or share your information with third parties for marketing purposes.</p>
@@ -74,9 +74,9 @@ export default function PrivacyPage() {
           <section>
             <h2 className="text-lg font-semibold text-foreground mb-3">6. Open source</h2>
             <p>
-              ZeroicAI is an open-source project. The framework code is publicly available at{' '}
-              <a href="https://github.com/ZeroicAI" target="_blank" rel="noopener noreferrer" className="text-[var(--cyan)] hover:underline">
-                github.com/ZeroicAI
+              RustyAI is an open-source project. The framework code is publicly available at{' '}
+              <a href="https://github.com/RustyAI" target="_blank" rel="noopener noreferrer" className="text-[var(--cyan)] hover:underline">
+                github.com/RustyAI
               </a>. Contributing to the project does not subject you to additional data collection beyond what GitHub collects.
             </p>
           </section>
@@ -85,10 +85,10 @@ export default function PrivacyPage() {
             <h2 className="text-lg font-semibold text-foreground mb-3">7. Contact</h2>
             <p>
               For privacy-related questions, reach us on{' '}
-              <a href="https://t.me/ZeroicAI" target="_blank" rel="noopener noreferrer" className="text-[var(--cyan)] hover:underline">
+              <a href="https://t.me/RustyAI" target="_blank" rel="noopener noreferrer" className="text-[var(--cyan)] hover:underline">
                 Telegram
               </a>{' '}or{' '}
-              <a href="https://x.com/ZeroicAI" target="_blank" rel="noopener noreferrer" className="text-[var(--cyan)] hover:underline">
+              <a href="https://x.com/RustyAI" target="_blank" rel="noopener noreferrer" className="text-[var(--cyan)] hover:underline">
                 X / Twitter
               </a>.
             </p>

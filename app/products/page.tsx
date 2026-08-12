@@ -3,9 +3,9 @@ import { ProductsContent } from "./products-content";
 
 export const metadata: Metadata = {
   title: "Products",
-  description: "Applications built with the ZeroicAI multi-agent framework.",
+  description: "Applications built with the RustyAI multi-agent framework.",
   alternates: {
-    canonical: "https://www.zeroicai.xyz/products",
+    canonical: "https://www.rustyai.xyz/products",
   },
 };
 

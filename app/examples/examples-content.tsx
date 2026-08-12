@@ -19,11 +19,11 @@ const examples: Example[] = [
   {
     title: 'Hello Agent',
     description: 'The simplest possible agent — spawns into the runtime, ticks every 500ms, and shuts down cleanly. Start here.',
-    tags: ['z-core', 'z-runtime', 'Agent trait'],
+    tags: ['agent-core', 'runtime', 'Agent trait'],
     filename: 'hello_agent.rs',
     runCmd: 'cargo run --example hello_agent',
-    code: `use z_core::{Agent, AgentContext, AgentId, AgentResult};
-use z_runtime::prelude::*;
+    code: `use agent_core::{Agent, AgentContext, AgentId, AgentResult};
+use runtime::prelude::*;
 use async_trait::async_trait;
 
 struct GreeterAgent { id: AgentId, count: u32 }
@@ -61,11 +61,11 @@ async fn main() -> Result<(), RuntimeError> {
   {
     title: 'BDI Cognitive Reasoning',
     description: 'A CognitiveAgent loads beliefs from JSON and answers questions via forward-chaining inference. Unknown questions fall back to an LLM.',
-    tags: ['z-cognition', 'z-runtime', 'BeliefBase', 'Rule'],
+    tags: ['cognition', 'runtime', 'BeliefBase', 'Rule'],
     filename: 'cognitive_agent.rs',
     runCmd: 'cargo run --example cognitive_agent',
-    code: `use z_cognition::Rule;
-use z_runtime::{prelude::*, CognitiveAgent};
+    code: `use cognition::Rule;
+use runtime::{prelude::*, CognitiveAgent};
 
 // Load 61 beliefs from JSON, wire two inference rules
 let mut thinker = CognitiveAgent::from_config(
@@ -76,8 +76,8 @@ let mut thinker = CognitiveAgent::from_config(
 thinker.add_rule(
     Rule::new("topic:what_is")
         .with_condition("what")
-        .with_condition("zeroicai")
-        .with_conclusion("what_is_zeroicai"),
+        .with_condition("rustyai")
+        .with_conclusion("what_is_rustyai"),
 );
 thinker.add_rule(
     Rule::new("topic:patterns")
@@ -96,17 +96,17 @@ let runtime = Runtime::new();
 runtime.spawn(Box::new(thinker), "thinker").await?;
 runtime.spawn(Box::new(CuriousAgent::new()), "curious").await?;
 
-// CuriousAgent → thinker: "What is ZeroicAI?"
+// CuriousAgent → thinker: "What is RustyAI?"
 // thinker → CuriousAgent: "<answer from belief base>"`,
   },
   {
     title: 'Market Auction',
     description: 'Three trader agents bid in a sealed-bid auction for a GPU cluster. The auctioneer resolves via FIPA CFP → Propose → Accept performatives.',
-    tags: ['z-patterns', 'z-runtime', 'Market', 'FIPA ACL'],
+    tags: ['patterns', 'runtime', 'Market', 'FIPA ACL'],
     filename: 'market_pattern.rs',
     runCmd: 'cargo run --example market_pattern',
-    code: `use z_patterns::market::{Auction, AuctionType, Bid};
-use z_runtime::prelude::*;
+    code: `use patterns::market::{Auction, AuctionType, Bid};
+use runtime::prelude::*;
 
 // Sealed-bid auction, $5k reserve
 let auction = Arc::new(Mutex::new(
@@ -128,11 +128,11 @@ runtime.spawn(Box::new(AuctioneerAgent::new(auction.clone(), 3)), "auctioneer").
   {
     title: 'Swarm Consensus',
     description: 'Five scout agents vote independently on a route. A tally agent counts results and declares the swarm decision — no central coordinator.',
-    tags: ['z-patterns', 'z-runtime', 'Swarm', 'Decentralized'],
+    tags: ['patterns', 'runtime', 'Swarm', 'Decentralized'],
     filename: 'swarm_pattern.rs',
     runCmd: 'cargo run --example swarm_pattern',
-    code: `use z_patterns::swarm::Swarm;
-use z_runtime::prelude::*;
+    code: `use patterns::swarm::Swarm;
+use runtime::prelude::*;
 
 let mut swarm = Swarm::new("Scout Swarm");
 let board = VoteBoard::new(); // shared Arc<Mutex<Vec<(agent, vote)>>>
@@ -159,10 +159,10 @@ for (name, preference) in &agents {
   {
     title: 'Supervised Recovery',
     description: 'An agent intentionally crashes 3 times. The runtime restarts it automatically using the OnFailure restart strategy with exponential backoff.',
-    tags: ['z-runtime', 'RestartPolicy', 'CircuitBreaker'],
+    tags: ['runtime', 'RestartPolicy', 'CircuitBreaker'],
     filename: 'supervised_agents.rs',
     runCmd: 'cargo run --example supervised_agents',
-    code: `use z_runtime::prelude::*;
+    code: `use runtime::prelude::*;
 
 let counter = Arc::new(AtomicU32::new(0));
 
@@ -187,7 +187,7 @@ tokio::time::sleep(Duration::from_secs(8)).await;
   {
     title: 'Full System Demo',
     description: 'Workers report to a manager, a CognitiveAgent answers queries, and an unreliable agent crashes twice before recovering — all in one runtime.',
-    tags: ['z-core', 'z-cognition', 'z-runtime', 'z-messaging'],
+    tags: ['agent-core', 'cognition', 'runtime', 'messaging'],
     filename: 'full_system.rs',
     runCmd: 'cargo run --example full_system',
     code: `// Stage 1: Workers report to Manager via FIPA Inform
@@ -251,12 +251,12 @@ export default function Examples() {
             <p className="text-muted-foreground text-sm max-w-xl leading-relaxed mb-6">
               Every snippet below is pulled directly from{' '}
               <a
-                href="https://github.com/ZeroicAI/z-examples"
+                href="https://github.com/RustyAI/examples"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-[var(--cyan)] hover:underline"
               >
-                ZeroicAI/z-examples
+                RustyAI/examples
               </a>
               . Clone the repo and run any of them with a single{' '}
               <code className="font-mono text-xs bg-white/5 px-1.5 py-0.5 rounded">cargo run</code>.
@@ -264,7 +264,7 @@ export default function Examples() {
             <div className="holo-frame inline-flex items-center gap-3 px-4 py-3">
               <Terminal className="h-4 w-4 text-[var(--cyan)]" />
               <code className="font-mono text-sm text-[var(--cyan)]">
-                git clone https://github.com/ZeroicAI/z-examples
+                git clone https://github.com/RustyAI/examples
               </code>
             </div>
           </motion.div>
@@ -338,12 +338,12 @@ export default function Examples() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <a
-                href="https://github.com/ZeroicAI/z-examples"
+                href="https://github.com/RustyAI/examples"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-cyber"
               >
-                View z-examples on GitHub
+                View examples on GitHub
                 <ArrowRight className="h-3.5 w-3.5" />
               </a>
               <Link href="/docs/getting-started" className="btn-cyber btn-cyber-ghost">

@@ -24,7 +24,7 @@ const PHRASES = [
 export function AgentTicker() {
   const items = [...PHRASES, ...PHRASES, ...PHRASES, ...PHRASES];
   return (
-    <div className="relative w-full overflow-hidden border-y border-[var(--cyan)]/30 bg-black/50 py-2 backdrop-blur-sm">
+    <div className="relative w-full overflow-hidden border-y border-[var(--cyan)]/30 bg-white/90 py-2 backdrop-blur-sm">
       <div className="flex w-max animate-ticker gap-14 whitespace-nowrap">
         {items.map((p, i) => (
           <span

@@ -3,6 +3,11 @@ import { ArrowRight, BookOpen, ChevronRight, Code, Cpu, Network, ExternalLink } 
 import { Layout } from '@/components/layout/Layout';
 import { MotionDiv } from '@/components/framer/motion';
 
+const ACCENT_STYLES = {
+  orange: { border: 'rgba(232,71,28,0.25)', bg: 'rgba(232,71,28,0.15)', text: 'var(--cyan)' },
+  violet: { border: 'rgba(139,92,246,0.25)', bg: 'rgba(139,92,246,0.15)', text: 'var(--neon)' },
+} as const;
+
 const docSections = [
   {
     icon: BookOpen,
@@ -10,6 +15,7 @@ const docSections = [
     description: 'Learn the basics and build your first agent in minutes.',
     href: '/docs/getting-started',
     external: false,
+    accent: 'orange' as const,
   },
   {
     icon: Cpu,
@@ -17,6 +23,7 @@ const docSections = [
     description: 'Understand the modular polyrepo design and how components work together.',
     href: '/crates',
     external: false,
+    accent: 'violet' as const,
   },
   {
     icon: Code,
@@ -24,6 +31,7 @@ const docSections = [
     description: 'Complete API documentation for all public interfaces.',
     href: '/examples',
     external: false,
+    accent: 'orange' as const,
   },
   {
     icon: Network,
@@ -31,6 +39,7 @@ const docSections = [
     description: 'Explore organizational patterns like hierarchy, swarm, and market.',
     href: '/examples',
     external: false,
+    accent: 'violet' as const,
   },
 ];
 
@@ -61,19 +70,20 @@ export default function Docs() {
 
         <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-5">
           {docSections.map((section, i) => {
+            const colors = ACCENT_STYLES[section.accent];
             const inner = (
               <>
                 <div
                   className="h-14 w-14 flex items-center justify-center mb-5 rounded-lg"
-                  style={{ background: 'rgba(232,71,28,0.15)', border: '1px solid rgba(232,71,28,0.25)' }}
+                  style={{ background: colors.bg, border: `1px solid ${colors.border}` }}
                 >
-                  <section.icon className="h-6 w-6 text-[var(--cyan)]" />
+                  <section.icon className="h-6 w-6" style={{ color: colors.text }} />
                 </div>
                 <h2 className="text-xl font-bold mb-2">{section.title}</h2>
                 <p className="text-muted-foreground text-sm leading-relaxed mb-5 flex-1">
                   {section.description}
                 </p>
-                <span className="text-sm font-medium flex items-center gap-1 text-[var(--cyan)]">
+                <span className="text-sm font-medium flex items-center gap-1" style={{ color: colors.text }}>
                   {section.external ? (
                     <>Open GitHub <ExternalLink className="h-3.5 w-3.5" /></>
                   ) : (

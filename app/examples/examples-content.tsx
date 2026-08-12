@@ -246,7 +246,7 @@ export default function Examples() {
             </p>
             <h1 className="text-3xl sm:text-4xl font-bold tracking-tight mb-4">
               Examples that{' '}
-              <span className="text-[var(--cyan)]">actually compile</span>
+              <span className="text-gradient-brand">actually compile</span>
             </h1>
             <p className="text-muted-foreground text-sm max-w-xl leading-relaxed mb-6">
               Every snippet below is pulled directly from{' '}
@@ -330,7 +330,7 @@ export default function Examples() {
             </p>
             <h2 className="text-2xl sm:text-3xl font-bold tracking-tight mb-3">
               See the rest on{' '}
-              <span className="text-[var(--cyan)]">GitHub</span>
+              <span className="text-gradient-brand">GitHub</span>
             </h2>
             <p className="text-muted-foreground text-sm max-w-md mb-8">
               The full repo includes blackboard, coalition, federation, hierarchy,

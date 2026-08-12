@@ -46,9 +46,10 @@
     --code-bg: 42 20% 98%;
     --code-foreground: 210 14% 15%;
 
-    /* Accent token — orange */
+    /* Accent tokens — duotone: rust orange + electric violet */
     --cyan: #e8471c;
     --neon: #8b5cf6;
+    --violet: 258 90% 66%;
     --yellow-glow: #d4f53f;
     --purple-glow: #9b55cc;
     --blood: #c43e1e;
@@ -348,8 +349,16 @@
   }
   .progress-bar-fill {
     @apply h-full rounded-full transition-all duration-1000 ease-out;
-    background: linear-gradient(to right, var(--cyan), rgba(232, 71, 28, 0.6));
+    background: linear-gradient(to right, var(--cyan), var(--neon));
     box-shadow: 0 0 6px rgba(232, 71, 28, 0.5);
+  }
+
+  /* Duotone gradient text — rust orange into electric violet */
+  .text-gradient-brand {
+    background: linear-gradient(100deg, var(--cyan) 20%, var(--neon) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
   }
 
   .crate-badge {

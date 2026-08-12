@@ -5,10 +5,16 @@ import { motion } from 'framer-motion';
 import { ChevronRight, TrendingUp, Server, Gamepad2, Radio, Activity, Bot, ArrowRight } from 'lucide-react';
 import { Layout } from '@/components/layout/Layout';
 
+const ACCENT_STYLES = {
+  orange: { text: 'var(--cyan)', rgb: '232,71,28' },
+  violet: { text: 'var(--neon)', rgb: '139,92,246' },
+} as const;
+
 const useCases = [
   {
     icon: TrendingUp,
     title: 'DeFi & Trading Bots',
+    accent: 'orange' as const,
     description:
       'Coordinate fleets of trading agents using built-in auction types — Dutch, sealed-bid, and English. BDI reasoning handles signal evaluation and position sizing before execution. Not just rule triggers — actual agent cognition.',
     examples: [
@@ -22,6 +28,7 @@ const useCases = [
   {
     icon: Activity,
     title: 'Swarm Simulations',
+    accent: 'violet' as const,
     description:
       'Model flocking, stigmergy, and emergent behavior with the Swarm pattern. Thousands of lightweight async agents on a single Tokio runtime — zero GC pauses, real swarm dynamics in safe Rust.',
     examples: [
@@ -35,6 +42,7 @@ const useCases = [
   {
     icon: Server,
     title: 'Self-Healing Services',
+    accent: 'orange' as const,
     description:
       'Supervised agent hierarchies with 4 restart strategies and circuit breakers. Each stage recovers without operator intervention. Think Kubernetes — but for your agent graph, with reasoning built in.',
     examples: [
@@ -48,6 +56,7 @@ const useCases = [
   {
     icon: Bot,
     title: 'Reasoning Chatbots',
+    accent: 'violet' as const,
     description:
       'BDI agents that query a structured belief base before replying. Rule-based inference engine with certainty scoring. LLM as fallback, not foundation — structured knowledge over pattern matching.',
     examples: [
@@ -61,6 +70,7 @@ const useCases = [
   {
     icon: Radio,
     title: 'IoT Coordination',
+    accent: 'orange' as const,
     description:
       'Deploy agents across edge nodes using the Federation pattern. Each node runs an independent agent; agents negotiate over FIPA ACL without a central coordinator. Fully decentralized.',
     examples: [
@@ -74,6 +84,7 @@ const useCases = [
   {
     icon: Gamepad2,
     title: 'Game AI & NPCs',
+    accent: 'violet' as const,
     description:
       'Give NPCs real goals, beliefs, and STRIPS-style planning instead of scripted state machines. The IntentionStack and UtilityFunction map directly to game-AI design patterns — no custom glue needed.',
     examples: [
@@ -116,7 +127,7 @@ export default function UseCases() {
             </p>
             <h1 className="text-3xl sm:text-4xl font-bold tracking-tight mb-4">
               Real systems,{' '}
-              <span className="text-[var(--cyan)]">real Rust</span>
+              <span className="text-gradient-brand">real Rust</span>
             </h1>
             <p className="text-muted-foreground text-sm max-w-xl leading-relaxed">
               RustyAI is a coordination and reasoning layer — not a toy demo.
@@ -136,7 +147,10 @@ export default function UseCases() {
                 className="holo-frame p-6 flex flex-col gap-4"
               >
                 <div className="flex items-center gap-3">
-                  <div className="p-2 rounded bg-[var(--cyan)]/10 text-[var(--cyan)]">
+                  <div
+                    className="p-2 rounded"
+                    style={{ color: ACCENT_STYLES[uc.accent].text, background: `rgba(${ACCENT_STYLES[uc.accent].rgb},0.1)` }}
+                  >
                     <uc.icon className="h-4 w-4" />
                   </div>
                   <h3 className="font-semibold text-sm">{uc.title}</h3>
@@ -149,7 +163,7 @@ export default function UseCases() {
                 <ul className="space-y-1.5">
                   {uc.examples.map((ex) => (
                     <li key={ex} className="flex items-start gap-2 text-xs text-muted-foreground">
-                      <span className="text-[var(--cyan)] font-mono mt-0.5">▸</span>
+                      <span className="font-mono mt-0.5" style={{ color: ACCENT_STYLES[uc.accent].text }}>▸</span>
                       {ex}
                     </li>
                   ))}
@@ -159,7 +173,12 @@ export default function UseCases() {
                   {uc.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="font-mono text-[0.6rem] px-2 py-0.5 rounded border border-[var(--cyan)]/20 text-[var(--cyan)]/60 bg-[var(--cyan)]/5"
+                      className="font-mono text-[0.6rem] px-2 py-0.5 rounded border"
+                      style={{
+                        borderColor: `rgba(${ACCENT_STYLES[uc.accent].rgb},0.2)`,
+                        color: `rgba(${ACCENT_STYLES[uc.accent].rgb},0.7)`,
+                        background: `rgba(${ACCENT_STYLES[uc.accent].rgb},0.05)`,
+                      }}
                     >
                       {tag}
                     </span>
@@ -182,7 +201,7 @@ export default function UseCases() {
             </p>
             <h2 className="text-2xl sm:text-3xl font-bold tracking-tight mb-3">
               Ready to build your{' '}
-              <span className="text-[var(--cyan)]">agent system?</span>
+              <span className="text-gradient-brand">agent system?</span>
             </h2>
             <p className="text-muted-foreground text-sm max-w-md mb-8">
               Start with the crates you need. Every pattern, primitive, and runtime

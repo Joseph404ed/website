@@ -22,36 +22,47 @@ import { Layout } from '@/components/layout/Layout';
 import { FeatureCard } from '@/components/FeatureCard';
 import { CodeBlock } from '@/components/CodeBlock';
 
-const features = [
+const features: {
+  icon: typeof Cpu;
+  title: string;
+  description: string;
+  accent: 'orange' | 'violet';
+}[] = [
   {
     icon: Cpu,
     title: 'Agent Primitives',
     description: 'Implement the Agent trait with four async methods — initialize, execute, shutdown, handle_message. UUID-based AgentId, AgentContext for messaging and logging, and AgentState lifecycle machine.',
+    accent: 'orange',
   },
   {
     icon: MessageSquare,
     title: 'FIPA Messaging',
     description: '11 FIPA performatives: Inform, Request, Query, Propose, Accept, Reject, Confirm, Disconfirm, Subscribe, CFP, Refuse. MessageBuilder API, typed Router, and bounded async Mailboxes.',
+    accent: 'violet',
   },
   {
     icon: Brain,
     title: 'BDI Architecture',
     description: 'Full Beliefs-Desires-Intentions model. BeliefBase with certainty scoring, forward-chaining ReasoningEngine, STRIPS-style Planner, UtilityFunction, Goal types, and IntentionStack.',
+    accent: 'orange',
   },
   {
     icon: Network,
     title: '8 Organizational Patterns',
     description: 'Blackboard, Swarm, Federation, Hierarchy, Team, Market (4 auction types), Coalition, and Holarchy. Each pattern ships as a composable struct.',
+    accent: 'violet',
   },
   {
     icon: Zap,
     title: 'Production Runtime',
     description: '4 restart strategies, CircuitBreaker (Closed/Open/HalfOpen), HealthCheck, MetricsRegistry, Sandbox isolation, and 4 scheduling policies. Built on Tokio.',
+    accent: 'orange',
   },
   {
     icon: Shield,
     title: 'Rust Safety',
     description: 'All types are Send + Sync. Zero-cost async on Tokio. Memory safety without GC. The type system enforces agent contracts at compile time.',
+    accent: 'violet',
   },
 ];
 
@@ -156,11 +167,17 @@ export default function Home() {
             backgroundSize: '40px 40px',
           }}
         />
-        {/* Orange hero glow */}
+        {/* Duotone hero glow — orange top, violet trailing beneath */}
         <div
           className="pointer-events-none absolute inset-0"
           style={{
             background: 'radial-gradient(ellipse 80% 50% at 50% -5%, rgba(232,71,28,0.12) 0%, transparent 65%)',
+          }}
+        />
+        <div
+          className="pointer-events-none absolute inset-0"
+          style={{
+            background: 'radial-gradient(ellipse 60% 45% at 85% 35%, rgba(139,92,246,0.10) 0%, transparent 65%)',
           }}
         />
 
@@ -193,7 +210,7 @@ export default function Home() {
               className="text-3xl sm:text-5xl lg:text-6xl font-bold leading-[1.1] tracking-tight mb-6"
             >
               Build Autonomous{' '}
-              <span className="text-[var(--cyan)]">Agent Systems</span>{' '}
+              <span className="text-gradient-brand">Agent Systems</span>{' '}
               in Rust
             </motion.h1>
 
@@ -545,11 +562,17 @@ export default function Home() {
             className="relative overflow-hidden rounded-xl border border-white/10 p-12 sm:p-20 text-center"
             style={{ background: 'hsl(var(--card))' }}
           >
-            {/* Orange glow inside card */}
+            {/* Duotone glow inside card — orange lower-left, violet upper-right */}
             <div
               className="pointer-events-none absolute inset-0"
               style={{
                 background: 'radial-gradient(ellipse 60% 80% at 20% 60%, rgba(232,71,28,0.22) 0%, transparent 60%)',
+              }}
+            />
+            <div
+              className="pointer-events-none absolute inset-0"
+              style={{
+                background: 'radial-gradient(ellipse 50% 70% at 85% 30%, rgba(139,92,246,0.16) 0%, transparent 60%)',
               }}
             />
 

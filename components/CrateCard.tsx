@@ -13,6 +13,7 @@ interface CrateCardProps {
   features: string[];
   href: string;
   delay?: number;
+  accent?: 'orange' | 'violet';
 }
 
 const statusConfig: Record<CrateStatus, { label: string; className: string }> = {
@@ -21,8 +22,14 @@ const statusConfig: Record<CrateStatus, { label: string; className: string }> = 
   'coming-soon': { label: 'Coming Soon', className: 'crate-badge coming-soon' },
 };
 
-export function CrateCard({ name, description, status, features, href, delay = 0 }: CrateCardProps) {
+const ACCENT_STYLES = {
+  orange: { border: 'rgba(232,71,28,0.25)', bg: 'rgba(232,71,28,0.15)', text: 'var(--cyan)' },
+  violet: { border: 'rgba(139,92,246,0.25)', bg: 'rgba(139,92,246,0.15)', text: 'var(--neon)' },
+};
+
+export function CrateCard({ name, description, status, features, href, delay = 0, accent = 'orange' }: CrateCardProps) {
   const { label, className } = statusConfig[status];
+  const colors = ACCENT_STYLES[accent];
   const isExternal = href.startsWith('http');
   const isDisabled = status === 'coming-soon';
 
@@ -32,9 +39,9 @@ export function CrateCard({ name, description, status, features, href, delay = 0
         <div className="flex items-center gap-2.5">
           <div
             className="h-8 w-8 flex items-center justify-center rounded"
-            style={{ background: 'rgba(232,71,28,0.15)', border: '1px solid rgba(232,71,28,0.25)' }}
+            style={{ background: colors.bg, border: `1px solid ${colors.border}` }}
           >
-            <Package className="h-4 w-4 text-[var(--cyan)]" />
+            <Package className="h-4 w-4" style={{ color: colors.text }} />
           </div>
           <span className="font-mono font-semibold">{name}</span>
         </div>

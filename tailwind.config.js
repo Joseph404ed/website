@@ -59,6 +59,9 @@ module.exports = {
           DEFAULT: "hsl(var(--rust-orange))",
           dark: "hsl(var(--rust-orange-dark))",
         },
+        violet: {
+          DEFAULT: "hsl(var(--violet))",
+        },
         code: {
           bg: "hsl(var(--code-bg))",
           foreground: "hsl(var(--code-foreground))",

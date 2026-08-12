@@ -10,6 +10,7 @@ interface CrateInfo {
   status: CrateStatus;
   features: string[];
   href: string;
+  accent: 'orange' | 'violet';
 }
 
 const crates: CrateInfo[] = [
@@ -19,6 +20,7 @@ const crates: CrateInfo[] = [
     status: 'stable',
     features: ['Agent trait', 'AgentId (UUID)', 'AgentContext', 'AgentState machine'],
     href: 'https://github.com/RustyAI/agent-core',
+    accent: 'orange',
   },
   {
     name: 'messaging',
@@ -26,6 +28,7 @@ const crates: CrateInfo[] = [
     status: 'stable',
     features: ['Router', 'Mailbox', 'FIPA performatives', 'RequestReply'],
     href: 'https://github.com/RustyAI/messaging',
+    accent: 'violet',
   },
   {
     name: 'cognition',
@@ -33,6 +36,7 @@ const crates: CrateInfo[] = [
     status: 'beta',
     features: ['BeliefBase', 'ReasoningEngine', 'STRIPS Planner', 'BDI model'],
     href: 'https://github.com/RustyAI/cognition',
+    accent: 'orange',
   },
   {
     name: 'patterns',
@@ -40,6 +44,7 @@ const crates: CrateInfo[] = [
     status: 'beta',
     features: ['Swarm', 'Hierarchy', 'Market', 'Federation', 'Coalition', 'Blackboard', 'Team', 'Holarchy'],
     href: 'https://github.com/RustyAI/patterns',
+    accent: 'violet',
   },
   {
     name: 'runtime',
@@ -47,6 +52,7 @@ const crates: CrateInfo[] = [
     status: 'beta',
     features: ['Supervisor', 'CircuitBreaker', 'Scheduler', 'MetricsRegistry', 'Sandbox'],
     href: 'https://github.com/RustyAI/runtime',
+    accent: 'orange',
   },
   {
     name: 'rustyai',
@@ -54,6 +60,7 @@ const crates: CrateInfo[] = [
     status: 'stable',
     features: ['Single dependency', 'Re-exports all crates', 'Prelude module'],
     href: 'https://github.com/RustyAI/rustyai',
+    accent: 'violet',
   },
   {
     name: 'deploy',
@@ -61,6 +68,7 @@ const crates: CrateInfo[] = [
     status: 'coming-soon',
     features: ['Docker', 'Railway', 'Monitoring', 'CLI'],
     href: 'https://github.com/RustyAI',
+    accent: 'orange',
   },
 ];
 

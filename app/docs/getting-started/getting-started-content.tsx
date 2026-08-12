@@ -15,12 +15,12 @@ const tocItems = [
 ];
 
 const installCode = `[dependencies]
-z-core    = { git = "https://github.com/ZeroicAI/z-core",    branch = "main" }
-z-runtime = { git = "https://github.com/ZeroicAI/z-runtime", branch = "main" }
+agent-core    = { git = "https://github.com/RustyAI/agent-core",    branch = "main" }
+runtime = { git = "https://github.com/RustyAI/runtime", branch = "main" }
 tokio     = { version = "1", features = ["full"] }
 async-trait = "0.1"`;
 
-const firstAgentCode = `use z_core::{Agent, AgentContext, AgentId, AgentResult};
+const firstAgentCode = `use agent_core::{Agent, AgentContext, AgentId, AgentResult};
 use async_trait::async_trait;
 use std::time::Duration;
 
@@ -51,8 +51,8 @@ impl Agent for GreeterAgent {
     }
 }`;
 
-const runtimeCode = `use z_core::AgentId;
-use z_runtime::{Runtime, supervisor::RestartPolicy};
+const runtimeCode = `use agent_core::AgentId;
+use runtime::{Runtime, supervisor::RestartPolicy};
 
 #[tokio::main]
 async fn main() {
@@ -120,7 +120,7 @@ export default function GettingStarted() {
               <div className="max-w-3xl">
                 <h1 className="text-4xl font-bold mb-4">Getting Started</h1>
                 <p className="text-xl text-muted-foreground mb-8">
-                  Build your first multi-agent system with ZeroicAI in minutes.
+                  Build your first multi-agent system with RustyAI in minutes.
                 </p>
 
                 {/* Installation */}
@@ -132,17 +132,17 @@ export default function GettingStarted() {
                     Installation
                   </h2>
                   <p className="text-muted-foreground mb-4">
-                    ZeroicAI crates are on GitHub. Add them to your{' '}
+                    RustyAI crates are on GitHub. Add them to your{' '}
                     <code className="px-1.5 py-0.5 rounded bg-muted font-mono text-sm">Cargo.toml</code>{' '}
                     as git dependencies:
                   </p>
                   <CodeBlock code={installCode} language="toml" filename="Cargo.toml" showLineNumbers={false} />
                   <div className="mt-4 p-4 rounded-lg bg-primary/5 border border-primary/20">
                     <p className="text-sm text-muted-foreground">
-                      Add only the crates you need. <code className="font-mono">z-core</code> defines
-                      the Agent trait. <code className="font-mono">z-runtime</code> runs your agents.
-                      Add <code className="font-mono">z-cognition</code> and{' '}
-                      <code className="font-mono">z-patterns</code> when you need BDI reasoning or
+                      Add only the crates you need. <code className="font-mono">agent-core</code> defines
+                      the Agent trait. <code className="font-mono">runtime</code> runs your agents.
+                      Add <code className="font-mono">cognition</code> and{' '}
+                      <code className="font-mono">patterns</code> when you need BDI reasoning or
                       organizational coordination.
                     </p>
                   </div>
@@ -158,7 +158,7 @@ export default function GettingStarted() {
                   </h2>
                   <p className="text-muted-foreground mb-4">
                     Implement the <code className="px-1.5 py-0.5 rounded bg-muted font-mono text-sm">Agent</code>{' '}
-                    trait from <code className="px-1.5 py-0.5 rounded bg-muted font-mono text-sm">z-core</code>.
+                    trait from <code className="px-1.5 py-0.5 rounded bg-muted font-mono text-sm">agent-core</code>.
                     Four async methods — <code className="font-mono text-sm">id</code>,{' '}
                     <code className="font-mono text-sm">initialize</code>,{' '}
                     <code className="font-mono text-sm">execute</code>, and{' '}
@@ -230,7 +230,7 @@ export default function GettingStarted() {
                       <code className="font-mono">"query"</code>,{' '}
                       <code className="font-mono">"propose"</code>,{' '}
                       <code className="font-mono">"cfp"</code> and 6 more.
-                      The Router in z-runtime delivers messages by agent name.
+                      The Router in runtime delivers messages by agent name.
                     </p>
                   </div>
                 </section>
@@ -240,14 +240,14 @@ export default function GettingStarted() {
                   <h2 className="text-2xl font-bold mb-6">Next Steps</h2>
                   <div className="grid sm:grid-cols-2 gap-4">
                     <a
-                      href="https://github.com/ZeroicAI/z-examples"
+                      href="https://github.com/RustyAI/examples"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="feature-card block"
                     >
                       <h3 className="font-semibold mb-2">Run the Examples</h3>
                       <p className="text-sm text-muted-foreground mb-3">
-                        Clone z-examples and run any example with a single{' '}
+                        Clone examples and run any example with a single{' '}
                         <code className="font-mono">cargo run</code> command.
                       </p>
                       <span className="text-sm text-primary font-medium flex items-center gap-1">
@@ -257,7 +257,7 @@ export default function GettingStarted() {
                     <Link href="/crates" className="feature-card block">
                       <h3 className="font-semibold mb-2">Explore Crates</h3>
                       <p className="text-sm text-muted-foreground mb-3">
-                        Add BDI cognition with z-cognition or coordination patterns with z-patterns.
+                        Add BDI cognition with cognition or coordination patterns with patterns.
                       </p>
                       <span className="text-sm text-primary font-medium flex items-center gap-1">
                         View crates <ArrowRight className="h-4 w-4" />

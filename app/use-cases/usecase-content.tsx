@@ -17,7 +17,7 @@ const useCases = [
       'Risk management hierarchies with circuit breakers',
       'Sentiment coalition agents feeding into a lead trader',
     ],
-    tags: ['Market pattern', 'z-patterns', 'z-cognition'],
+    tags: ['Market pattern', 'patterns', 'cognition'],
   },
   {
     icon: Activity,
@@ -30,7 +30,7 @@ const useCases = [
       'Agent-based economic modeling',
       'Particle physics simulation with BDI agents',
     ],
-    tags: ['Swarm pattern', 'z-core', 'z-runtime'],
+    tags: ['Swarm pattern', 'agent-core', 'runtime'],
   },
   {
     icon: Server,
@@ -43,7 +43,7 @@ const useCases = [
       'Distributed caching with coordinator agents',
       'Consensus protocols backed by a Hierarchy pattern',
     ],
-    tags: ['z-runtime', 'Hierarchy pattern', 'CircuitBreaker'],
+    tags: ['runtime', 'Hierarchy pattern', 'CircuitBreaker'],
   },
   {
     icon: Bot,
@@ -56,7 +56,7 @@ const useCases = [
       'Medical triage agents with rule-based inference',
       'Financial advisory agents with regulatory guardrails',
     ],
-    tags: ['z-cognition', 'BeliefBase', 'ReasoningEngine'],
+    tags: ['cognition', 'BeliefBase', 'ReasoningEngine'],
   },
   {
     icon: Radio,
@@ -69,7 +69,7 @@ const useCases = [
       'Factory floor agents negotiating shared resources',
       'Edge sensor networks with FIPA ACL messaging',
     ],
-    tags: ['Federation pattern', 'z-messaging', 'FIPA ACL'],
+    tags: ['Federation pattern', 'messaging', 'FIPA ACL'],
   },
   {
     icon: Gamepad2,
@@ -82,7 +82,7 @@ const useCases = [
       'Emergent faction behavior via Coalition pattern',
       'NPC economies using the Market auction pattern',
     ],
-    tags: ['z-cognition', 'Planner', 'UtilityFunction'],
+    tags: ['cognition', 'Planner', 'UtilityFunction'],
   },
 ];
 
@@ -119,7 +119,7 @@ export default function UseCases() {
               <span className="text-[var(--cyan)]">real Rust</span>
             </h1>
             <p className="text-muted-foreground text-sm max-w-xl leading-relaxed">
-              ZeroicAI is a coordination and reasoning layer — not a toy demo.
+              RustyAI is a coordination and reasoning layer — not a toy demo.
               Here's what teams are building with it across industries.
             </p>
           </motion.div>
@@ -194,7 +194,7 @@ export default function UseCases() {
                 <ArrowRight className="h-3.5 w-3.5" />
               </Link>
               <a
-                href="https://github.com/ZeroicAI"
+                href="https://github.com/RustyAI"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-cyber btn-cyber-ghost"

@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { ArrowRight, BookOpen, Code, Cpu, Network, ExternalLink } from 'lucide-react';
+import { ArrowRight, BookOpen, ChevronRight, Code, Cpu, Network, ExternalLink } from 'lucide-react';
 import { Layout } from '@/components/layout/Layout';
 import { MotionDiv } from '@/components/framer/motion';
 
@@ -37,6 +37,15 @@ const docSections = [
 export default function Docs() {
   return (
     <Layout>
+      <div className="border-b bg-muted/30">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-4">
+          <nav className="flex items-center gap-2 text-sm text-muted-foreground">
+            <Link href="/" className="hover:text-foreground transition-colors">Home</Link>
+            <ChevronRight className="h-4 w-4" />
+            <span className="text-foreground">Documentation</span>
+          </nav>
+        </div>
+      </div>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <MotionDiv
           initial={{ opacity: 0, y: 20 }}
@@ -46,7 +55,7 @@ export default function Docs() {
         >
           <h1 className="text-4xl font-bold mb-4">Documentation</h1>
           <p className="text-lg text-muted-foreground">
-            Everything you need to build multi-agent systems with ZeroicAI.
+            Everything you need to build multi-agent systems with RustyAI.
           </p>
         </MotionDiv>
 

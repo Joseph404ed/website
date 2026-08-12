@@ -3,7 +3,7 @@ import Crates from "./crates-content";
 
 export const metadata: Metadata = {
   alternates: {
-    canonical: "https://www.zeroicai.xyz/crates",
+    canonical: "https://www.rustyai.xyz/crates",
   },
 };
 

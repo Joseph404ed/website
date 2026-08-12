@@ -105,7 +105,7 @@ export function ChatUI() {
             {messages.length === 0 && (
               <div className="text-center text-muted-foreground mt-20 space-y-3">
                 <p className="text-lg">No messages yet</p>
-                <p className="text-sm">Try asking: &quot;What is ZeroicAI?&quot; or &quot;What patterns are supported?&quot;</p>
+                <p className="text-sm">Try asking: &quot;What is RustyAI?&quot; or &quot;What patterns are supported?&quot;</p>
               </div>
             )}
 

@@ -13,7 +13,7 @@ import { Button } from '@/components/ui/button';
 
 const DEMO_LINES = [
   { text: '╔══════════════════════════════════════════════════╗', delay: 0,    color: 'text-cyan-400' },
-  { text: '║  ZeroicAI × Solana - Autonomous Trading Swarm  ║', delay: 80,   color: 'text-cyan-400' },
+  { text: '║  RustyAI × Solana - Autonomous Trading Swarm  ║', delay: 80,   color: 'text-cyan-400' },
   { text: '║  6 agents · BDI reasoning · Supervision         ║', delay: 160,  color: 'text-cyan-400' },
   { text: '╚══════════════════════════════════════════════════╝', delay: 240,  color: 'text-cyan-400' },
   { text: '', delay: 320, color: '' },
@@ -50,7 +50,7 @@ const DEMO_LINES = [
   { text: '  Price rounds:    5   (SOL/USDC simulated feed)', delay: 4950, color: 'text-zinc-300' },
   { text: '  Trades settled:  3', delay: 5050, color: 'text-emerald-400' },
   { text: '  Crashes handled: 2   (auto-recovered by Supervisor)', delay: 5150, color: 'text-emerald-400' },
-  { text: '  Framework:       ZeroicAI v0.1 · github.com/ZeroicAI', delay: 5300, color: 'text-cyan-400' },
+  { text: '  Framework:       RustyAI v0.1 · github.com/RustyAI', delay: 5300, color: 'text-cyan-400' },
   { text: '', delay: 5400, color: '' },
   { text: '  ✓ Demo complete. Zero human intervention.', delay: 5500, color: 'text-emerald-500' },
 ];
@@ -90,7 +90,7 @@ function AnimatedTerminal() {
         <div className="h-3 w-3 rounded-full bg-yellow-500/70" />
         <div className="h-3 w-3 rounded-full bg-emerald-500/70" />
         <span className="ml-3 text-xs text-zinc-500 font-mono">
-          z-examples - cargo run --example solana_swarm
+          examples - cargo run --example solana_swarm
         </span>
         {!started && (
           <button
@@ -222,11 +222,11 @@ export default function SolanaPage() {
               <span className="text-primary">in Rust</span>
             </h1>
             <p className="text-xl text-muted-foreground mb-8">
-              ZeroicAI lets you build trading bots, MEV agents, and self-healing infrastructure
+              RustyAI lets you build trading bots, MEV agents, and self-healing infrastructure
               as a swarm of autonomous Rust programs that coordinate, reason, and recover - without a central controller.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <a href="https://github.com/ZeroicAI/z-examples" target="_blank" rel="noopener noreferrer">
+              <a href="https://github.com/RustyAI/examples" target="_blank" rel="noopener noreferrer">
                 <Button size="lg">
                   Run the demo <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
@@ -322,7 +322,7 @@ export default function SolanaPage() {
                       ))}
                     </div>
                     <a
-                      href={`https://github.com/ZeroicAI/z-examples/blob/main/examples/${uc.example}.rs`}
+                      href={`https://github.com/RustyAI/examples/blob/main/examples/${uc.example}.rs`}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-xs text-primary font-mono flex items-center gap-1 hover:underline"
@@ -446,16 +446,16 @@ export default function SolanaPage() {
             >
               <h2 className="text-3xl font-bold mb-4">Ready to build?</h2>
               <p className="text-muted-foreground mb-8 max-w-xl mx-auto">
-                Clone z-examples and run the trading swarm demo in under 2 minutes.
+                Clone examples and run the trading swarm demo in under 2 minutes.
                 No API keys, no config - just Rust and Cargo.
               </p>
               <div className="bg-zinc-950 border border-zinc-800 rounded-lg inline-block px-6 py-3 font-mono text-sm text-emerald-400 mb-8">
                 cargo run --example solana_swarm
               </div>
               <div className="flex flex-wrap justify-center gap-4">
-                <a href="https://github.com/ZeroicAI/z-examples" target="_blank" rel="noopener noreferrer">
+                <a href="https://github.com/RustyAI/examples" target="_blank" rel="noopener noreferrer">
                   <Button size="lg">
-                    Clone z-examples <ExternalLink className="ml-2 h-4 w-4" />
+                    Clone examples <ExternalLink className="ml-2 h-4 w-4" />
                   </Button>
                 </a>
                 <Link href="/docs/getting-started">

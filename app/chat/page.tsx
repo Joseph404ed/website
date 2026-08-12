@@ -3,7 +3,7 @@ import { ChatUI } from "./chat-ui";
 
 export const metadata: Metadata = {
   title: "Chat with CognitiveAgent",
-  description: "Ask the ZeroicAI CognitiveAgent about the framework. Powered by a knowledge base with LLM fallback.",
+  description: "Ask the RustyAI CognitiveAgent about the framework. Powered by a knowledge base with LLM fallback.",
 };
 
 export default function ChatPage() {

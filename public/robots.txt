@@ -3,4 +3,4 @@ User-agent: *
 Allow: /
 
 # Sitemap location
-Sitemap: https://www.zeroicai.org/sitemap.xml
+Sitemap: https://www.rustyai.org/sitemap.xml

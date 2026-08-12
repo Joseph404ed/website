@@ -14,53 +14,53 @@ interface CrateInfo {
 
 const crates: CrateInfo[] = [
   {
-    name: 'z-core',
+    name: 'agent-core',
     description: 'Agent trait, AgentId, AgentContext, AgentState, and AgentResult. The foundation every other crate builds on.',
     status: 'stable',
     features: ['Agent trait', 'AgentId (UUID)', 'AgentContext', 'AgentState machine'],
-    href: 'https://github.com/ZeroicAI/z-core',
+    href: 'https://github.com/RustyAI/agent-core',
   },
   {
-    name: 'z-messaging',
+    name: 'messaging',
     description: 'Async message passing with a typed Router, bounded Mailboxes, MessageBuilder, and 11 FIPA ACL performatives.',
     status: 'stable',
     features: ['Router', 'Mailbox', 'FIPA performatives', 'RequestReply'],
-    href: 'https://github.com/ZeroicAI/z-messaging',
+    href: 'https://github.com/RustyAI/messaging',
   },
   {
-    name: 'z-cognition',
+    name: 'cognition',
     description: 'Full BDI cognitive architecture: BeliefBase, forward-chaining ReasoningEngine, BFS STRIPS Planner, UtilityFunction, and IntentionStack.',
     status: 'beta',
     features: ['BeliefBase', 'ReasoningEngine', 'STRIPS Planner', 'BDI model'],
-    href: 'https://github.com/ZeroicAI/z-cognition',
+    href: 'https://github.com/RustyAI/cognition',
   },
   {
-    name: 'z-patterns',
-    description: '8 organizational patterns for multi-agent coordination, each with a spawn_agents() bridge to z-runtime.',
+    name: 'patterns',
+    description: '8 organizational patterns for multi-agent coordination, each with a spawn_agents() bridge to runtime.',
     status: 'beta',
     features: ['Swarm', 'Hierarchy', 'Market', 'Federation', 'Coalition', 'Blackboard', 'Team', 'Holarchy'],
-    href: 'https://github.com/ZeroicAI/z-patterns',
+    href: 'https://github.com/RustyAI/patterns',
   },
   {
-    name: 'z-runtime',
+    name: 'runtime',
     description: 'Async execution engine on Tokio. Spawns agents as tasks, supervises with restart policies, and provides circuit breaking, scheduling, metrics, and sandboxing.',
     status: 'beta',
     features: ['Supervisor', 'CircuitBreaker', 'Scheduler', 'MetricsRegistry', 'Sandbox'],
-    href: 'https://github.com/ZeroicAI/z-runtime',
+    href: 'https://github.com/RustyAI/runtime',
   },
   {
-    name: 'zeroicai',
-    description: 'Facade crate that re-exports z-core, z-messaging, z-cognition, z-patterns, and z-runtime as a single dependency.',
+    name: 'rustyai',
+    description: 'Facade crate that re-exports agent-core, messaging, cognition, patterns, and runtime as a single dependency.',
     status: 'stable',
     features: ['Single dependency', 'Re-exports all crates', 'Prelude module'],
-    href: 'https://github.com/ZeroicAI/zeroicai',
+    href: 'https://github.com/RustyAI/rustyai',
   },
   {
-    name: 'z-deploy',
-    description: 'Deployment CLI and utilities for containerizing, monitoring, and scaling ZeroicAI agent systems in production.',
+    name: 'deploy',
+    description: 'Deployment CLI and utilities for containerizing, monitoring, and scaling RustyAI agent systems in production.',
     status: 'coming-soon',
     features: ['Docker', 'Railway', 'Monitoring', 'CLI'],
-    href: 'https://github.com/ZeroicAI',
+    href: 'https://github.com/RustyAI',
   },
 ];
 
@@ -90,7 +90,7 @@ export default function Crates() {
           >
             <h1 className="text-4xl font-bold mb-4">Crates</h1>
             <p className="text-xl text-start text-muted-foreground max-w-2xl mx-auto">
-              ZeroicAI is built as a polyrepo of independent crates. Use only what you need,
+              RustyAI is built as a polyrepo of independent crates. Use only what you need,
               or combine them for a complete multi-agent framework.
             </p>
           </MotionDiv>

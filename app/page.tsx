@@ -3,7 +3,7 @@ import Home from "./home-content";
 
 export const metadata: Metadata = {
   alternates: {
-    canonical: "https://www.zeroicai.xyz/",
+    canonical: "https://www.rustyai.xyz/",
   },
 };
 

@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
-const SUBTITLE = "Agents zeroing in and out";
+const SUBTITLE = "Rusted AI";
 
 interface SplashScreenProps {
   onDone: () => void;
@@ -45,7 +45,7 @@ export function SplashScreen({ onDone }: SplashScreenProps) {
           exit={{ opacity: 0, y: -16 }}
           transition={{ duration: 0.55, ease: 'easeInOut' }}
           className="fixed inset-0 z-[9999] flex flex-col items-center justify-center select-none"
-          style={{ background: '#0e0f14' }}
+          style={{ background: 'rgba(255, 255, 255, 0.98)' }}
         >
           {/* Title */}
           <motion.h1
@@ -53,9 +53,9 @@ export function SplashScreen({ onDone }: SplashScreenProps) {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, ease: 'easeOut' }}
             className="font-bold tracking-tight"
-            style={{ fontFamily: 'Inter, system-ui, sans-serif', fontSize: 'clamp(2.5rem, 8vw, 5rem)', color: '#ffffff' }}
+            style={{ fontFamily: 'Inter, system-ui, sans-serif', fontSize: 'clamp(2.5rem, 8vw, 5rem)', color: 'var(--foreground)' }}
           >
-            <span style={{ color: 'var(--cyan)' }}>0</span>ICAI
+            <span style={{ color: 'var(--cyan)' }}>r</span>AI
           </motion.h1>
 
           {/* Subtitle — typewriter */}
@@ -64,7 +64,7 @@ export function SplashScreen({ onDone }: SplashScreenProps) {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.3, delay: 0.6 }}
             className="mt-3 font-mono"
-            style={{ fontSize: 'clamp(0.75rem, 2.5vw, 1rem)', color: 'rgba(255,255,255,0.4)', letterSpacing: '0.08em' }}
+            style={{ fontSize: 'clamp(0.75rem, 2.5vw, 1rem)', color: 'rgba(33, 33, 33, 0.7)', letterSpacing: '0.08em' }}
           >
             — {SUBTITLE.slice(0, charIndex)}
             <span

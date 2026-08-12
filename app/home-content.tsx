@@ -55,7 +55,7 @@ const features = [
   },
 ];
 
-const heroCode = `use z_core::prelude::*;
+const heroCode = `use agent_core::prelude::*;
 
 #[async_trait]
 impl Agent for MyAgent {
@@ -78,11 +78,11 @@ impl Agent for MyAgent {
 }`;
 
 const quickStartCode = `[dependencies]
-z-core = { git = "https://github.com/ZeroicAI/z-core" }
-z-messaging = { git = "https://github.com/ZeroicAI/z-messaging" }
-z-cognition = { git = "https://github.com/ZeroicAI/z-cognition" }
-z-patterns = { git = "https://github.com/ZeroicAI/z-patterns" }
-z-runtime = { git = "https://github.com/ZeroicAI/z-runtime" }`;
+agent-core = { git = "https://github.com/RustyAI/agent-core" }
+messaging = { git = "https://github.com/RustyAI/messaging" }
+cognition = { git = "https://github.com/RustyAI/cognition" }
+patterns = { git = "https://github.com/RustyAI/patterns" }
+runtime = { git = "https://github.com/RustyAI/runtime" }`;
 
 const stats = [
   { label: 'Crates', value: '7', icon: Package },
@@ -95,28 +95,28 @@ const useCases = [
     icon: TrendingUp,
     title: 'DeFi & Trading Bots',
     description: 'Coordinate fleets of trading agents using the Market pattern — Dutch auctions, sealed bids, and English auctions built in. BDI reasoning for signal evaluation and position sizing.',
-    tags: ['Market pattern', 'z-patterns', 'z-cognition'],
+    tags: ['Market pattern', 'patterns', 'cognition'],
   },
   {
     icon: Server,
     title: 'Self-Healing Services',
     description: 'Supervised agent hierarchies with 4 restart strategies and circuit breakers. Build pipelines where each stage is an autonomous agent that recovers without operator intervention.',
-    tags: ['z-runtime', 'Hierarchy pattern', 'CircuitBreaker'],
+    tags: ['runtime', 'Hierarchy pattern', 'CircuitBreaker'],
   },
 ];
 
 const roadmapItems = [
-  { name: 'z-core', status: 'done' },
-  { name: 'z-messaging', status: 'done' },
-  { name: 'z-cognition', status: 'done' },
-  { name: 'z-patterns', status: 'done' },
-  { name: 'z-runtime', status: 'done' },
-  { name: 'zeroicai', status: 'done' },
-  { name: 'z-xbot', status: 'done' },
-  { name: 'z-deploy', status: 'planned' },
+  { name: 'agent-core', status: 'done' },
+  { name: 'messaging', status: 'done' },
+  { name: 'cognition', status: 'done' },
+  { name: 'patterns', status: 'done' },
+  { name: 'runtime', status: 'done' },
+  { name: 'rustyai', status: 'done' },
+  { name: 'xbot', status: 'done' },
+  { name: 'deploy', status: 'planned' },
 ];
 
-const CA = 'yi66MMYBeHvMAbiboJeqVcjXh3b746D3P6nCRfypump';
+const CA = '...';
 
 function CopyCA() {
   const [copied, setCopied] = useState(false);
@@ -203,7 +203,7 @@ export default function Home() {
               transition={{ delay: 0.3 }}
               className="text-muted-foreground text-base leading-relaxed mb-8 max-w-lg"
             >
-              ZeroicAI is a modular, production-ready multi-agent framework.
+              RustyAI is a modular, production-ready multi-agent framework.
               BDI cognition, FIPA messaging, 8 organizational patterns, and a
               supervised async runtime — all in safe Rust.
             </motion.p>
@@ -223,7 +223,7 @@ export default function Home() {
                 <ArrowRight className="h-3.5 w-3.5" />
               </Link>
               <a
-                href="https://github.com/ZeroicAI"
+                href="https://github.com/RustyAI"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-cyber btn-cyber-ghost"
@@ -265,7 +265,7 @@ export default function Home() {
             </div>
             <div className="lg:hidden">
               <CodeBlock
-                code={`use z_core::prelude::*;\n\n#[async_trait]\nimpl Agent for MyAgent {\n    async fn execute(\n        &mut self,\n        ctx: &AgentContext,\n    ) -> AgentResult<()> {\n        ctx.log_info("Tick");\n        Ok(())\n    }\n}`}
+                code={`use agent_core::prelude::*;\n\n#[async_trait]\nimpl Agent for MyAgent {\n    async fn execute(\n        &mut self,\n        ctx: &AgentContext,\n    ) -> AgentResult<()> {\n        ctx.log_info("Tick");\n        Ok(())\n    }\n}`}
                 language="rust"
                 filename="agent.rs"
                 showLineNumbers={false}
@@ -324,7 +324,7 @@ export default function Home() {
               <span className="text-[var(--cyan)]">real Rust</span>
             </h2>
             <p className="text-muted-foreground text-sm max-w-xl">
-              ZeroicAI is a coordination and reasoning layer — not a toy demo.
+              RustyAI is a coordination and reasoning layer — not a toy demo.
               Here's what teams are building with it.
             </p>
           </motion.div>
@@ -566,7 +566,7 @@ export default function Home() {
                   <ArrowRight className="h-3.5 w-3.5" />
                 </Link>
                 <a
-                  href="https://github.com/ZeroicAI"
+                  href="https://github.com/RustyAI"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-cyber btn-cyber-ghost"

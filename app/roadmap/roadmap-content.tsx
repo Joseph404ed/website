@@ -14,70 +14,70 @@ interface RoadmapItem {
 
 const roadmapItems: RoadmapItem[] = [
   {
-    name: 'z-core',
+    name: 'agent-core',
     version: '0.1.0',
     status: 'done',
     description: 'Agent trait, AgentId, AgentContext, AgentState machine, and AgentResult. The foundation every other crate builds on.',
     features: ['Agent trait', 'AgentId (UUID)', 'AgentContext', 'AgentState machine'],
   },
   {
-    name: 'z-messaging',
+    name: 'messaging',
     version: '0.1.0',
     status: 'done',
     description: 'Async message passing with a typed Router, bounded Mailboxes, and 11 FIPA ACL performatives.',
     features: ['Router', 'Mailbox', 'FIPA performatives', 'RequestReply protocol'],
   },
   {
-    name: 'z-cognition',
+    name: 'cognition',
     version: '0.1.0-beta',
     status: 'done',
     description: 'Full BDI cognitive architecture: BeliefBase, forward-chaining ReasoningEngine, BFS STRIPS Planner, UtilityFunction, and IntentionStack.',
     features: ['BeliefBase', 'ReasoningEngine', 'STRIPS Planner', 'BDI deliberation'],
   },
   {
-    name: 'z-patterns',
+    name: 'patterns',
     version: '0.1.0-beta',
     status: 'done',
-    description: '8 organizational patterns for multi-agent coordination, each with a spawn_agents() bridge to z-runtime.',
+    description: '8 organizational patterns for multi-agent coordination, each with a spawn_agents() bridge to runtime.',
     features: ['Swarm', 'Hierarchy', 'Market', 'Federation', 'Coalition', 'Blackboard', 'Team', 'Holarchy'],
   },
   {
-    name: 'z-runtime',
+    name: 'runtime',
     version: '0.1.0-beta',
     status: 'done',
     description: 'Async execution engine on Tokio. Supervised lifecycle, circuit breaker, scheduler, metrics registry, and agent sandbox — running in production.',
     features: ['Supervisor', 'CircuitBreaker', 'Scheduler', 'MetricsRegistry', 'Sandbox'],
   },
   {
-    name: 'zeroicai',
+    name: 'rustyai',
     version: '0.1.0',
     status: 'done',
     description: 'Facade crate that re-exports all five core crates as a single dependency.',
     features: ['Re-exports all crates', 'Prelude module', 'Single dependency'],
   },
   {
-    name: 'z-xbot',
+    name: 'xbot',
     version: '0.1.0',
     status: 'done',
-    description: 'Live X/Twitter agent built on the framework — posts scheduled content, replies to mentions using BDI reasoning. First production ZeroicAI application.',
+    description: 'Live X/Twitter agent built on the framework — posts scheduled content, replies to mentions using BDI reasoning. First production RustyAI application.',
     features: ['CognitiveAgent', 'BeliefBase', 'Cron scheduler', 'Live on X'],
   },
   {
-    name: 'z-examples',
+    name: 'examples',
     version: '0.1.0',
     status: 'done',
     description: 'Runnable examples covering all 5 crates and all 8 patterns. Each example is a complete working program.',
     features: ['hello_agent', 'cognitive_agent', 'market_pattern', 'full_system'],
   },
   {
-    name: 'z-deploy',
+    name: 'deploy',
     version: '0.2.0',
     status: 'planned',
-    description: 'Deployment CLI and utilities for containerizing and scaling ZeroicAI agent systems in production.',
+    description: 'Deployment CLI and utilities for containerizing and scaling RustyAI agent systems in production.',
     features: ['Docker', 'Railway', 'Monitoring', 'CLI tooling'],
   },
   {
-    name: 'z-tools',
+    name: 'tools',
     version: '0.2.0',
     status: 'planned',
     description: 'Development and debugging utilities: message inspector, agent visualizer, and test harness.',
@@ -121,7 +121,7 @@ export default function Roadmap() {
           >
             <h1 className="text-4xl font-bold mb-4">Roadmap</h1>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-8">
-              Track our progress as we build the complete ZeroicAI framework.
+              Track our progress as we build the complete RustyAI framework.
             </p>
 
             {/* Progress overview */}
@@ -219,7 +219,7 @@ export default function Roadmap() {
             <p className="text-muted-foreground mb-4">
               Want to contribute to the roadmap? We welcome contributions!
             </p>
-            <a href="https://github.com/ZeroicAI" target="_blank" rel="noopener noreferrer">
+            <a href="https://github.com/RustyAI" target="_blank" rel="noopener noreferrer">
               <Button variant="outline">
                 <ExternalLink className="mr-2 h-4 w-4" />
                 Contribute on GitHub

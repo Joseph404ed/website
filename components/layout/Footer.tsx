@@ -9,16 +9,16 @@ const footerLinks = {
     { label: 'Examples', href: '/examples' },
   ],
   crates: [
-    { label: 'z-core', href: '/crates' },
-    { label: 'z-messaging', href: '/crates' },
-    { label: 'z-cognition', href: '/crates' },
-    { label: 'z-patterns', href: '/crates' },
+    { label: 'agent-core', href: '/crates' },
+    { label: 'messaging', href: '/crates' },
+    { label: 'cognition', href: '/crates' },
+    { label: 'patterns', href: '/crates' },
   ],
   community: [
-    { label: 'GitHub', href: 'https://github.com/zeroicai', external: true },
-    { label: 'Twitter / X', href: 'https://x.com/ZeroicAI', external: true },
-    { label: 'Telegram', href: 'https://t.me/ZeroicAI', external: true },
-    { label: 'Contributing', href: 'https://github.com/zeroicai', external: true },
+    { label: 'GitHub', href: 'https://github.com/rustyai', external: true },
+    { label: 'Twitter / X', href: 'https://x.com/RustyAI', external: true },
+    { label: 'Telegram', href: 'https://t.me/RustyAI', external: true },
+    { label: 'Contributing', href: 'https://github.com/rustyai', external: true },
   ],
 };
 
@@ -26,7 +26,7 @@ export function Footer() {
   return (
     <footer
       className="border-t border-[var(--cyan)]/15 mt-auto"
-      style={{ background: 'rgba(10, 11, 16, 0.97)' }}
+      style={{ background: 'rgba(10, 10, 15, 0.97)' }}
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-14">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-10">
@@ -35,14 +35,14 @@ export function Footer() {
           <div className="col-span-2 md:col-span-1">
             <Link href="/" className="flex items-center gap-3 mb-5 group w-fit">
               <Image
-                src="/assets/logo-x.png"
-                alt="ZeroicAI"
+                src="/assets/r-logo.png"
+                alt="RustyAI"
                 width={28}
                 height={28}
                 className="opacity-80 group-hover:opacity-100 transition-opacity"
               />
               <span className="font-display text-sm font-bold uppercase tracking-widest text-foreground group-hover:text-[var(--cyan)] transition-colors">
-                ZeroicAI
+                RustyAI
               </span>
             </Link>
             <p className="text-xs text-muted-foreground leading-relaxed mb-5 max-w-[200px]">
@@ -50,7 +50,7 @@ export function Footer() {
             </p>
             <div className="flex gap-4">
               <a
-                href="https://github.com/zeroicai"
+                href="https://github.com/rustyai"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="font-mono text-[0.6rem] uppercase tracking-widest text-muted-foreground hover:text-[var(--cyan)] transition-colors"
@@ -58,7 +58,7 @@ export function Footer() {
                 GitHub ↗
               </a>
               <a
-                href="https://x.com/ZeroicAI"
+                href="https://x.com/RustyAI"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="font-mono text-[0.6rem] uppercase tracking-widest text-muted-foreground hover:text-[var(--cyan)] transition-colors"
@@ -66,7 +66,7 @@ export function Footer() {
                 X / Twitter ↗
               </a>
               <a
-                href="https://t.me/ZeroicAI"
+                href="https://t.me/RustyAI"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="font-mono text-[0.6rem] uppercase tracking-widest text-muted-foreground hover:text-[var(--cyan)] transition-colors"
@@ -148,7 +148,7 @@ export function Footer() {
         {/* Bottom bar */}
         <div className="mt-12 pt-6 border-t border-[var(--cyan)]/10 flex flex-col sm:flex-row justify-between items-center gap-4">
           <p className="terminal-text text-[0.6rem] uppercase tracking-widest opacity-50">
-            © {new Date().getFullYear()} ZeroicAI — MIT / Apache-2.0
+            © {new Date().getFullYear()} RustyAI — MIT / Apache-2.0
           </p>
           <div className="flex gap-6">
             <Link href="/privacy" className="font-mono text-[0.6rem] uppercase tracking-widest text-muted-foreground hover:text-[var(--cyan)] transition-colors">

@@ -6,45 +6,45 @@
 
 @layer base {
   :root {
-    /* Near-black dark palette */
-    --background: 230 18% 7%;
-    --foreground: 210 14% 89%;
-    --card: 230 14% 9%;
-    --card-foreground: 210 14% 89%;
-    --popover: 230 14% 9%;
-    --popover-foreground: 210 14% 89%;
+    /* Milk-white light palette */
+    --background: 42 20% 98%;
+    --foreground: 210 14% 15%;
+    --card: 42 20% 98%;
+    --card-foreground: 210 14% 15%;
+    --popover: 42 20% 98%;
+    --popover-foreground: 210 14% 15%;
     --primary: 18 82% 51%;
     --primary-foreground: 0 0% 100%;
-    --secondary: 230 12% 14%;
-    --secondary-foreground: 210 14% 89%;
-    --muted: 230 12% 11%;
+    --secondary: 42 18% 92%;
+    --secondary-foreground: 210 14% 15%;
+    --muted: 42 18% 94%;
     --muted-foreground: 220 8% 46%;
     --accent: 18 82% 51%;
     --accent-foreground: 0 0% 100%;
     --destructive: 0 72% 51%;
     --destructive-foreground: 0 0% 100%;
-    --border: 230 12% 16%;
-    --input: 230 12% 14%;
+    --border: 210 16% 92%;
+    --input: 210 16% 96%;
     --ring: 18 82% 51%;
     --radius: 0.5rem;
 
     /* Sidebar vars */
-    --sidebar-background: 230 18% 7%;
-    --sidebar-foreground: 210 14% 89%;
+    --sidebar-background: 42 20% 98%;
+    --sidebar-foreground: 210 14% 15%;
     --sidebar-primary: 18 82% 51%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 230 12% 14%;
-    --sidebar-accent-foreground: 210 14% 89%;
-    --sidebar-border: 230 12% 16%;
+    --sidebar-accent: 42 18% 92%;
+    --sidebar-accent-foreground: 210 14% 15%;
+    --sidebar-border: 42 18% 94%;
     --sidebar-ring: 18 82% 51%;
 
     /* Legacy compat */
     --rust-orange: 18 82% 51%;
     --rust-orange-dark: 18 75% 42%;
-    --slate-dark: 230 18% 7%;
-    --grid-color: 230 12% 11%;
-    --code-bg: 230 14% 9%;
-    --code-foreground: 210 14% 89%;
+    --slate-dark: 42 20% 98%;
+    --grid-color: 42 18% 94%;
+    --code-bg: 42 20% 98%;
+    --code-foreground: 210 14% 15%;
 
     /* Accent token — orange */
     --cyan: #e8471c;

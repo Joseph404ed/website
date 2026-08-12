@@ -1,12 +1,12 @@
-# ZeroicAI Website
+# RustyAI Website
 
-The official documentation and landing page for ZeroicAI - a comprehensive Rust framework for building intelligent, autonomous multi-agent systems.
+The official documentation and landing page for RustyAI - a comprehensive Rust framework for building intelligent, autonomous multi-agent systems.
 
 ## 🎯 Overview
 
-This website serves as the primary resource for developers exploring ZeroicAI, featuring:
+This website serves as the primary resource for developers exploring RustyAI, featuring:
 
-- **Landing Page** - Introduction to agent-oriented programming with ZeroicAI
+- **Landing Page** - Introduction to agent-oriented programming with RustyAI
 - **Documentation** - Comprehensive guides, tutorials, and API references
 - **Examples** - Interactive code samples and real-world use cases
 - **Crate Documentation** - Detailed docs for all 10 crates
@@ -25,18 +25,18 @@ This website serves as the primary resource for developers exploring ZeroicAI, f
 
 ## 📁 Project Structure
 ```
-zeroicai-website/
+rustyai-website/
 ├── app/
 │   ├── layout.tsx              # Root layout
 │   ├── page.tsx                # Homepage
 │   ├── docs/
 │   │   ├── page.tsx            # Docs homepage
 │   │   ├── getting-started/    # Getting started guide
-│   │   ├── core/               # z-core docs
-│   │   ├── messaging/          # z-messaging docs
-│   │   ├── cognition/          # z-cognition docs
-│   │   ├── patterns/           # z-patterns docs
-│   │   ├── runtime/            # z-runtime docs
+│   │   ├── core/               # agent-core docs
+│   │   ├── messaging/          # messaging docs
+│   │   ├── cognition/          # cognition docs
+│   │   ├── patterns/           # patterns docs
+│   │   ├── runtime/            # runtime docs
 │   │   └── ...
 │   ├── examples/
 │   │   └── page.tsx            # Code examples
@@ -69,7 +69,7 @@ zeroicai-website/
 │       ├── messaging/
 │       └── ...
 ├── public/
-│   ├── logo.svg                # ZeroicAI logo
+│   ├── logo.svg                # RustyAI logo
 │   ├── images/
 │   └── favicons/
 ├── styles/
@@ -90,8 +90,8 @@ zeroicai-website/
 ### Installation
 ```bash
 # Clone the repository
-git clone https://github.com/zeroicai/zeroicai-website.git
-cd zeroicai-website
+git clone https://github.com/rustyai/rustyai-website.git
+cd rustyai-website
 
 # Install dependencies
 npm install
@@ -145,7 +145,7 @@ Use the `CodeBlock` component:
 ```tsx
 <CodeBlock language="rust">
 {`
-use zeroicai::prelude::*;
+use rustyai::prelude::*;
 
 fn main() {
     let agent = Agent::new("example");
@@ -211,10 +211,10 @@ module.exports = {
 Each page includes proper meta tags:
 ```tsx
 export const metadata = {
-  title: 'ZeroicAI - Agent-Oriented Programming in Rust',
+  title: 'RustyAI - Agent-Oriented Programming in Rust',
   description: 'Build intelligent, autonomous multi-agent systems...',
   openGraph: {
-    title: 'ZeroicAI',
+    title: 'RustyAI',
     description: '...',
     images: ['/og-image.png'],
   },
@@ -258,7 +258,7 @@ vercel --prod
 
 Create `.env.local`:
 ```env
-NEXT_PUBLIC_SITE_URL=https://zeroicai.dev
+NEXT_PUBLIC_SITE_URL=https://rustyai.dev
 NEXT_PUBLIC_GA_ID=G-XXXXXXXXXX (optional)
 ```
 
@@ -269,11 +269,11 @@ NEXT_PUBLIC_GA_ID=G-XXXXXXXXXX (optional)
 - **Home** - Landing page with hero, features, examples
 - **Getting Started** - Installation, quick start, first agent
 - **Documentation Hub** - Overview of all crates
-- **z-core** - Agent primitives, identity, lifecycle
-- **z-messaging** - Communication protocols, FIPA ACL
-- **z-cognition** - BDI architecture, planning, reasoning
-- **z-patterns** - 8 organizational patterns
-- **z-runtime** - Execution, scheduling, supervision
+- **agent-core** - Agent primitives, identity, lifecycle
+- **messaging** - Communication protocols, FIPA ACL
+- **cognition** - BDI architecture, planning, reasoning
+- **patterns** - 8 organizational patterns
+- **runtime** - Execution, scheduling, supervision
 - **Examples** - Real-world code samples
 - **Use Cases** - Blockchain, trading, IoT, enterprise
 - **Roadmap** - Project status and future plans
@@ -284,7 +284,7 @@ NEXT_PUBLIC_GA_ID=G-XXXXXXXXXX (optional)
 ### Homepage Sections
 
 1. **Hero** - Tagline + CTA (Get Started, View Docs)
-2. **What is ZeroicAI** - Brief introduction
+2. **What is RustyAI** - Brief introduction
 3. **Key Features** - 4-6 feature cards
 4. **Code Example** - Show vs tell (before/after)
 5. **Use Cases** - Industry applications
@@ -301,16 +301,16 @@ Getting Started
 └── Core Concepts
 
 Crates
-├── z-core
-├── z-messaging
-├── z-cognition
-├── z-patterns
-├── z-runtime
-├── zeroicai-deploy
-├── zeroicai-tools
-├── zeroicai (facade)
-├── z-examples
-└── z-docs
+├── agent-core
+├── messaging
+├── cognition
+├── patterns
+├── runtime
+├── rustyai-deploy
+├── rustyai-tools
+├── rustyai (facade)
+├── examples
+└── docs
 
 Guides
 ├── Building Your First Agent
@@ -331,9 +331,9 @@ API Reference
 
 ## 🔗 External Links
 
-- **GitHub**: https://github.com/zeroicai
-- **Crates.io**: https://crates.io/crates/zeroicai
-- **Docs.rs**: https://docs.rs/zeroicai
+- **GitHub**: https://github.com/rustyai
+- **Crates.io**: https://crates.io/crates/rustyai
+- **Docs.rs**: https://docs.rs/rustyai
 
 ## 🤝 Contributing
 
@@ -350,7 +350,7 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for details.
 
 This website code is licensed under MIT.
 
-The ZeroicAI framework is licensed under MIT/Apache-2.0.
+The RustyAI framework is licensed under MIT/Apache-2.0.
 
 ---
 
@@ -370,4 +370,4 @@ npm run check-links   # Validate internal links (if script exists)
 
 ---
 
-*Built with Rusted-Mind for the ZeroicAI community*
+*Built with Rusted-Mind for the RustyAI community*

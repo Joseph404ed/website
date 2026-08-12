@@ -39,7 +39,7 @@ export function Header() {
         isScrolled ? 'border-b border-[var(--cyan)]/15 backdrop-blur-md' : ''
       }`}
       style={{
-        background: isScrolled ? 'rgba(10, 11, 16, 0.92)' : 'transparent',
+        background: isScrolled ? 'rgba(10, 10, 15, 0.92)' : 'transparent',
       }}
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -48,14 +48,14 @@ export function Header() {
           {/* Brand */}
           <Link href="/" className="flex items-center gap-3 group">
             <Image
-              src="/assets/logo-x.png"
-              alt="ZeroicAI"
+              src="/assets/r-logo.png"
+              alt="RustyAI"
               width={28}
               height={28}
               className="transition-opacity opacity-80 group-hover:opacity-100"
             />
             <span className="font-display text-sm font-bold uppercase tracking-widest text-foreground group-hover:text-[var(--cyan)] transition-colors">
-              ZeroicAI
+              RustyAI
             </span>
           </Link>
 
@@ -105,7 +105,7 @@ export function Header() {
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             className="md:hidden border-t border-[var(--cyan)]/20"
-            style={{ background: 'rgba(10, 11, 16, 0.97)' }}
+            style={{ background: 'rgba(255, 255, 255, 0.96)' }}
           >
             <nav className="container mx-auto px-4 py-4 space-y-1">
               {navItems.map((item) => (

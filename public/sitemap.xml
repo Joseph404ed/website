@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://www.rustyaifw.xyz/</loc><priority>1.0</priority></url>
+  <url><loc>https://www.rustyaifw.xyz/docs</loc><priority>0.8</priority></url>
+  <url><loc>https://www.rustyaifw.xyz/docs/getting-started</loc><priority>0.8</priority></url>
+  <url><loc>https://www.rustyaifw.xyz/architecture</loc><priority>0.7</priority></url>
+  <url><loc>https://www.rustyaifw.xyz/crates</loc><priority>0.7</priority></url>
+  <url><loc>https://www.rustyaifw.xyz/crates/agent-core</loc><priority>0.6</priority></url>
+  <url><loc>https://www.rustyaifw.xyz/crates/cognition</loc><priority>0.6</priority></url>
+  <url><loc>https://www.rustyaifw.xyz/crates/messaging</loc><priority>0.6</priority></url>
+  <url><loc>https://www.rustyaifw.xyz/crates/patterns</loc><priority>0.6</priority></url>
+  <url><loc>https://www.rustyaifw.xyz/crates/runtime</loc><priority>0.6</priority></url>
+  <url><loc>https://www.rustyaifw.xyz/crates/rustyai</loc><priority>0.6</priority></url>
+  <url><loc>https://www.rustyaifw.xyz/patterns</loc><priority>0.7</priority></url>
+  <url><loc>https://www.rustyaifw.xyz/examples</loc><priority>0.7</priority></url>
+  <url><loc>https://www.rustyaifw.xyz/community</loc><priority>0.6</priority></url>
+  <url><loc>https://www.rustyaifw.xyz/ecosystem</loc><priority>0.6</priority></url>
+  <url><loc>https://www.rustyaifw.xyz/roadmap</loc><priority>0.6</priority></url>
+  <url><loc>https://www.rustyaifw.xyz/xbot</loc><priority>0.6</priority></url>
+</urlset>

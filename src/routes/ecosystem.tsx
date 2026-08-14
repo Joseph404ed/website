@@ -1,5 +1,8 @@
+import { useState } from "react";
 import { createFileRoute } from "@tanstack/react-router";
+import { Check, Copy, ExternalLink } from "lucide-react";
 import { CTA, PageHeader, Section } from "@/components/primitives";
+import { TOKEN_CA, SOLSCAN_URL } from "@/lib/site-data";
 
 export const Route = createFileRoute("/ecosystem")({
   head: () => ({
@@ -21,6 +24,14 @@ export const Route = createFileRoute("/ecosystem")({
 });
 
 function EcosystemPage() {
+  const [copied, setCopied] = useState(false);
+
+  const copyCA = async () => {
+    await navigator.clipboard.writeText(TOKEN_CA);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
+
   return (
     <>
       <PageHeader
@@ -45,17 +56,32 @@ function EcosystemPage() {
             <h2 className="text-lg font-medium">Solana component</h2>
             <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
               A Solana-based community/token component exists as part of the wider ecosystem.
-              No contract address is published on this site, because no verified address is
-              available in the project repository.
+              The verified contract address is published below.
             </p>
-            <div className="mt-5 rounded-lg border border-dashed border-border bg-background p-4">
+            <div className="mt-5 rounded-lg border border-border bg-background p-4">
               <p className="font-mono text-[11px] uppercase tracking-[0.16em] text-subtle">
                 Contract address
               </p>
-              <p className="mt-2 font-mono text-sm text-muted-foreground">
-                Not published — will be listed here with a copy button and Solana explorer link
-                once verified in the repository.
-              </p>
+              <div className="mt-2 flex items-center gap-2">
+                <p className="flex-1 truncate font-mono text-sm text-foreground">{TOKEN_CA}</p>
+                <button
+                  type="button"
+                  onClick={copyCA}
+                  aria-label="Copy contract address"
+                  className="inline-flex items-center gap-1.5 rounded border border-border px-2 py-1 text-[11px] text-muted-foreground transition-colors hover:border-rust/60 hover:text-foreground"
+                >
+                  {copied ? <Check className="size-3 text-rust" /> : <Copy className="size-3" />}
+                  {copied ? "Copied" : "Copy"}
+                </button>
+              </div>
+              <a
+                href={SOLSCAN_URL}
+                target="_blank"
+                rel="noreferrer"
+                className="mt-3 inline-flex items-center gap-1.5 text-[12px] text-violet hover:opacity-80"
+              >
+                View on Solscan <ExternalLink className="size-3" />
+              </a>
             </div>
           </div>
         </div>

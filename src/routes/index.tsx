@@ -3,6 +3,7 @@ import { ArrowRight, Github } from "lucide-react";
 import { AgentGraph } from "@/components/AgentGraph";
 import { ArchitectureGraph } from "@/components/ArchitectureGraph";
 import { CodeBlock } from "@/components/CodeBlock";
+import { CopyCA } from "@/components/CopyCA";
 import { CTA, Section, SectionHeading, StatusBadge } from "@/components/primitives";
 import { crates, patterns, GITHUB_URL } from "@/lib/site-data";
 
@@ -50,7 +51,10 @@ function Index() {
         <div className="pointer-events-none absolute inset-0 duo-glow" />
         <div className="relative mx-auto grid max-w-7xl items-center gap-14 px-5 py-20 md:py-28 lg:grid-cols-[1.1fr_0.9fr]">
           <div>
-            <StatusBadge>Phase 2 · Stabilization</StatusBadge>
+            <div className="flex flex-wrap items-center gap-3">
+              <StatusBadge>Phase 2 · Stabilization</StatusBadge>
+              <CopyCA />
+            </div>
             <h1 className="mt-6 text-4xl font-semibold text-balance-tight md:text-6xl">
               Build Autonomous Systems in Rust.
             </h1>

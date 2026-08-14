@@ -4,6 +4,8 @@ export const TWITTER_URL = "https://x.com/RustyAIFwk";
 export const TELEGRAM_URL = "https://t.me/rustyaifw";
 export const TWITTER_HANDLE = "@RustyAIFwk";
 export const TELEGRAM_HANDLE = "@rustyaifw";
+export const TOKEN_CA = "Fwfx9SXtqLwH4H6b1m5pCUzcACZBvrGRn6w8TGXepump";
+export const SOLSCAN_URL = `https://solscan.io/token/${TOKEN_CA}`;
 
 export type Crate = {
   slug: string;

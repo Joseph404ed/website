@@ -5,6 +5,7 @@ import { GITHUB_URL } from "@/lib/site-data";
 import { cn } from "@/lib/utils";
 
 const nav = [
+  { to: "/", label: "Home" },
   { to: "/docs", label: "Docs" },
   { to: "/architecture", label: "Architecture" },
   { to: "/crates", label: "Crates" },
@@ -71,12 +72,6 @@ export function Navbar() {
             <Github className="size-4" />
             GitHub
           </a>
-          <Link
-            to="/docs/getting-started"
-            className="inline-flex items-center rounded-md bg-rust px-3 py-1.5 text-[13px] font-medium text-primary-foreground transition-opacity hover:opacity-90"
-          >
-            Get Started
-          </Link>
           <button
             type="button"
             aria-label="Toggle navigation"
